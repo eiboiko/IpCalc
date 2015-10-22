@@ -17,7 +17,7 @@ public class Netmask {
 		}
 		return netmask;
 	}
-
+	//did you see that ???
 	public static String toString(int[] netmask) {
 		return netmask[0] + "." + netmask[1] + "." + netmask[2] + "." + netmask[3];
 	}
