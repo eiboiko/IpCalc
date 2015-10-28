@@ -1,10 +1,4 @@
-import java.awt.BorderLayout;
-import java.awt.Container;
 import java.awt.EventQueue;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -13,11 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-
-public class window extends JFrame {
+public class UserInterface extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField getIp;
@@ -42,7 +32,7 @@ public class window extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					window frame = new window();
+					UserInterface frame = new UserInterface();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -51,11 +41,10 @@ public class window extends JFrame {
 		});
 	}
 
-	
 	/**
 	 * Create the frame.
 	 */
-	public window() {
+	public UserInterface() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -120,8 +109,7 @@ public class window extends JFrame {
 		btnCount = new JButton("Count");
 		btnCount.setBounds(224, 78, 109, 49);
 		contentPane.add(btnCount);
-		//ActionListener actionListener = new ButtonListener();
-		//btnCount.addActionListener(actionListener);
+		btnCount.addActionListener(new ButtonListener());
 
 		lblNewLabel_1 = new JLabel("Last host:");
 		lblNewLabel_1.setBounds(10, 167, 58, 14);

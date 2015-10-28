@@ -11,7 +11,7 @@ public class IpCalc {
 		}
 		return network;
 	}
-		//did you see that ???
+
 	public static int[] getBroadcast(int[] netmask, int[] ipOctet) {
 		int[] netmInv = { 255, 255, 255, 255 };
 		for (int k = 0; k < netmInv.length; k++) {
@@ -23,7 +23,7 @@ public class IpCalc {
 		}
 		return broadcast;
 	}
-	//did you see that ???
+
 	public static int[] getFirstHost(int[] network) {
 		int[] firstHost = network;
 		firstHost[3] = firstHost[3] + 1;
